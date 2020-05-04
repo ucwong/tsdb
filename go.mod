@@ -1,4 +1,4 @@
-module github.com/prometheus/tsdb
+module github.com/ucwong/tsdb
 
 go 1.14
 
