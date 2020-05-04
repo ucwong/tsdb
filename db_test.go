@@ -30,12 +30,12 @@ import (
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	prom_testutil "github.com/prometheus/client_golang/prometheus/testutil"
-	"github.com/prometheus/tsdb/chunks"
-	"github.com/prometheus/tsdb/index"
-	"github.com/prometheus/tsdb/labels"
-	"github.com/prometheus/tsdb/testutil"
-	"github.com/prometheus/tsdb/tsdbutil"
-	"github.com/prometheus/tsdb/wal"
+	"github.com/ucwong/tsdb/chunks"
+	"github.com/ucwong/tsdb/index"
+	"github.com/ucwong/tsdb/labels"
+	"github.com/ucwong/tsdb/testutil"
+	"github.com/ucwong/tsdb/tsdbutil"
+	"github.com/ucwong/tsdb/wal"
 )
 
 func openTestDB(t testing.TB, opts *Options) (db *DB, close func()) {
@@ -1339,7 +1339,7 @@ func TestOverlappingBlocksDetectsAllOverlaps(t *testing.T) {
 	}, OverlappingBlocks(nc1))
 }
 
-// Regression test for https://github.com/prometheus/tsdb/issues/347
+// Regression test for https://github.com/ucwong/tsdb/issues/347
 func TestChunkAtBlockBoundary(t *testing.T) {
 	db, delete := openTestDB(t, nil)
 	defer func() {

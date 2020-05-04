@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/log"
-	"github.com/prometheus/tsdb/testutil"
+	"github.com/ucwong/tsdb/testutil"
 )
 
 func TestWriteAndReadbackTombStones(t *testing.T) {

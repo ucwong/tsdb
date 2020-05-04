@@ -13,7 +13,7 @@
 
 ## 0.9.0
 
- - [FEATURE] Provide option to compress WAL records using Snappy. [#609](https://github.com/prometheus/tsdb/pull/609)
+ - [FEATURE] Provide option to compress WAL records using Snappy. [#609](https://github.com/ucwong/tsdb/pull/609)
  - [BUGFIX] Re-calculate block size when calling `block.Delete`.
  - [BUGFIX] Re-encode all head chunks at compaction that are open (being appended to) or outside the Maxt block range. This avoids writing out corrupt data. It happens when snapshotting with the head included.
  - [BUGFIX] Improved handling of multiple refs for the same series in WAL reading.
@@ -59,7 +59,7 @@
 
 ## 0.6.1
 
-  - [BUGFIX] Update `last` after appending a non-overlapping chunk in `chunks.MergeOverlappingChunks`. [#539](https://github.com/prometheus/tsdb/pull/539)
+  - [BUGFIX] Update `last` after appending a non-overlapping chunk in `chunks.MergeOverlappingChunks`. [#539](https://github.com/ucwong/tsdb/pull/539)
 
 ## 0.6.0
 
@@ -67,7 +67,7 @@
 
 ## 0.5.0
 
- - [FEATURE] Time-ovelapping blocks are now allowed. [#370](https://github.com/prometheus/tsdb/pull/370)
+ - [FEATURE] Time-ovelapping blocks are now allowed. [#370](https://github.com/ucwong/tsdb/pull/370)
    - Disabled by default and can be enabled via `AllowOverlappingBlock` option.
    - Added `MergeChunks` function in `chunkenc/xor.go` to merge 2 time-overlapping chunks.
    - Added `MergeOverlappingChunks` function in `chunks/chunks.go` to merge multiple time-overlapping Chunk Metas.
@@ -84,7 +84,7 @@
 ## 0.4.0
 
  - [CHANGE] New `WALSegmentSize` option to override the `DefaultOptions.WALSegmentSize`. Added to allow using smaller wal files. For example using tmpfs on a RPI to minimise the SD card wear out from the constant WAL writes. As part of this change the `DefaultOptions.WALSegmentSize` constant was also exposed.
- - [CHANGE] Empty blocks are not written during compaction [#374](https://github.com/prometheus/tsdb/pull/374)
+ - [CHANGE] Empty blocks are not written during compaction [#374](https://github.com/ucwong/tsdb/pull/374)
  - [FEATURE]  Size base retention through `Options.MaxBytes`.  As part of this change:
    - Added new metrics - `prometheus_tsdb_storage_blocks_bytes_total`, `prometheus_tsdb_size_retentions_total`, `prometheus_tsdb_time_retentions_total`
    - New public interface `SizeReader: Size() int64`

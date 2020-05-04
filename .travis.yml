@@ -8,7 +8,7 @@ os:
 go:
   - 1.12.x
 
-go_import_path: github.com/prometheus/tsdb
+go_import_path: github.com/ucwong/tsdb
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install make; fi

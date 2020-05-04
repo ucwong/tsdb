@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/log"
-	"github.com/prometheus/tsdb/fileutil"
-	"github.com/prometheus/tsdb/labels"
-	"github.com/prometheus/tsdb/testutil"
-	"github.com/prometheus/tsdb/wal"
+	"github.com/ucwong/tsdb/fileutil"
+	"github.com/ucwong/tsdb/labels"
+	"github.com/ucwong/tsdb/testutil"
+	"github.com/ucwong/tsdb/wal"
 )
 
 func TestSegmentWAL_cut(t *testing.T) {

@@ -20,11 +20,11 @@ import (
 	"unicode/utf8"
 
 	"github.com/pkg/errors"
-	"github.com/prometheus/tsdb/chunkenc"
-	"github.com/prometheus/tsdb/chunks"
-	tsdb_errors "github.com/prometheus/tsdb/errors"
-	"github.com/prometheus/tsdb/index"
-	"github.com/prometheus/tsdb/labels"
+	"github.com/ucwong/tsdb/chunkenc"
+	"github.com/ucwong/tsdb/chunks"
+	tsdb_errors "github.com/ucwong/tsdb/errors"
+	"github.com/ucwong/tsdb/index"
+	"github.com/ucwong/tsdb/labels"
 )
 
 // Querier provides querying access over time series data of a fixed
